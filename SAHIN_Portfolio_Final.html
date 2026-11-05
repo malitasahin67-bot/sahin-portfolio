@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SAHIN — Freelance Video Editor & Motion Designer</title>
+<meta name="description" content="Sahin is an independent video editor and motion designer for short-form content, product ads, jewelry commercials and cinematic storytelling.">
+<meta property="og:title" content="SAHIN — Freelance Video Editor & Motion Designer">
+<meta property="og:description" content="Turning ideas into visual stories. Reels, Shorts, product ads and motion graphics.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090D'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Arial' font-weight='700' text-anchor='middle' fill='%234D8DFF'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#08090D;--bg2:#11141C;--blue:#4D8DFF;--text:#fff;--mute:#A0A7B5;--line:#252B38;--h:'Space Grotesk','Arial Narrow',system-ui,sans-serif;--b:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.7 var(--b);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{max-width:100%}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.w{max-width:1120px;margin:0 auto;padding:0 1.3rem}
+h1,h2,h3{font-family:var(--h);margin:0;line-height:1.05}
+h2{font-size:clamp(2rem,6.5vw,3.6rem);margin-bottom:.8rem;letter-spacing:-.01em}
+.sub{color:var(--mute);max-width:38rem;margin:0 0 2.2rem}
+section{padding:5.5rem 0}
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1px solid var(--blue);background:var(--blue);color:#06101f;font:700 .95rem var(--h);letter-spacing:.06em;padding:.95rem 1.6rem;border-radius:4px;text-decoration:none;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(77,141,255,.35)}
+.btn.o{background:transparent;color:var(--text);border-color:var(--line)}
+.btn.o:hover{border-color:var(--blue);box-shadow:none}
+/* loader */
+#ld{position:fixed;inset:0;background:var(--bg);z-index:100;display:grid;place-items:center;transition:opacity .7s,visibility .7s}
+#ld.x{opacity:0;visibility:hidden}
+#ld b{font:700 clamp(2.4rem,12vw,5rem)/1 var(--h);letter-spacing:.3em;display:flex}
+#ld b span{opacity:0;transform:translateY(20px);animation:up .6s forwards}
+@keyframes up{to{opacity:1;transform:none}}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:rgba(8,9,13,.78);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.s{border-color:var(--line)}
+.nb{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 1.3rem var(--h);letter-spacing:.28em;text-decoration:none}
+.logo i{color:var(--blue);font-style:normal}
+.links{display:flex;gap:1.8rem}
+.links a{text-decoration:none;color:var(--mute);font-size:.92rem;transition:color .2s}
+.links a:hover{color:var(--text)}
+#mb{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:4px;padding:.65rem .9rem;min-height:44px;font:500 .9rem var(--b)}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding:7rem 0 5rem}
+.glow{position:absolute;width:70vmax;height:70vmax;right:-25vmax;top:-20vmax;background:radial-gradient(circle,rgba(77,141,255,.32),transparent 62%);animation:br 9s ease-in-out infinite alternate;will-change:transform}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,var(--bg))}
+@keyframes br{to{opacity:.55;transform:scale(1.12)}}
+.hero .w{position:relative;z-index:2}
+.eb{color:var(--blue);font:500 .8rem var(--h);letter-spacing:.2em;margin-bottom:1.3rem}
+.hero h1{font-size:clamp(2.7rem,10.5vw,7.4rem);letter-spacing:-.025em;max-width:13ch}
+.hero h1 .l{display:block;overflow:hidden}
+.hero h1 .l span{display:block;transform:translateY(105%);animation:up2 .9s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes up2{to{transform:none}}
+.hero p{color:var(--mute);max-width:33rem;margin:1.6rem 0 2.2rem;font-size:1.08rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.sc{position:absolute;left:50%;bottom:1.6rem;z-index:3;width:1px;height:46px;background:linear-gradient(var(--blue),transparent);animation:sc 2s infinite}
+@keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* reel */
+.reel{position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:radial-gradient(ellipse at 30% 30%,rgba(77,141,255,.35),transparent 60%),linear-gradient(135deg,#141a29,#0b0e15)}
+.reel video{width:100%;height:100%;display:block;background:#000}
+.pl{position:absolute;inset:0;width:100%;border:0;background:transparent;color:var(--text);cursor:pointer;display:grid;place-content:center;justify-items:center;gap:.9rem;font:500 .95rem var(--b)}
+.pl i{width:76px;height:76px;border-radius:50%;border:1px solid var(--blue);display:grid;place-items:center;background:rgba(8,9,13,.55);transition:transform .3s,box-shadow .3s}
+.pl:hover i{transform:scale(1.08);box-shadow:0 0 40px rgba(77,141,255,.5)}
+.pl i::after{content:"";border:11px solid transparent;border-left:18px solid var(--blue);margin-left:7px}
+.note{color:var(--mute);font-size:.88rem;margin-top:.9rem}
+/* projects */
+.leg{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.8rem}
+.leg span,.tag{font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:.2rem .75rem;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+.card:hover{border-color:var(--blue);transform:translateY(-4px)}
+.th{aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#17203a,#0b0e15)}
+.th div{width:100%;height:100%;display:grid;place-items:center;text-align:center;padding:1.2rem;color:#eaf1ff;font:500 .82rem var(--h);letter-spacing:.13em;text-transform:uppercase;transition:transform .6s;background:radial-gradient(circle at 72% 24%,rgba(77,141,255,.42),transparent 38%),linear-gradient(135deg,#17203a,#0b0e15)}
+.card:hover .th div{transform:scale(1.07)}
+.cb{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.cb h3{font-size:1.3rem}.cb p{margin:0;color:var(--mute);font-size:.93rem;flex:1}
+.cb .r{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap}
+.cb .r span:first-child{color:var(--blue);font-size:.82rem}
+.mini{background:none;border:1px solid var(--line);color:var(--text);border-radius:4px;padding:.55rem 1rem;font:500 .88rem var(--b);cursor:pointer;transition:border-color .2s}
+.mini:hover{border-color:var(--blue)}
+dialog{background:var(--bg2);color:var(--text);border:1px solid var(--line);border-radius:10px;width:min(680px,92vw);padding:1.5rem;max-height:88vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.78)}
+dialog h3{font-size:1.8rem;margin-bottom:.4rem}
+.cl{float:right;background:none;border:1px solid var(--line);color:var(--text);border-radius:4px;padding:.3rem .7rem;cursor:pointer}
+/* services */
+.sv{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.sv div{border:1px solid var(--line);border-radius:8px;padding:1.5rem 1.3rem;background:var(--bg);transition:border-color .3s,background .3s,transform .3s}
+.sv div:hover{border-color:var(--blue);transform:translateY(-4px);background:#0d1220}
+.sv svg{width:30px;height:30px;stroke:var(--blue);fill:none;stroke-width:1.6;margin-bottom:1rem}
+.sv h3{font-size:1.15rem;margin-bottom:.5rem}.sv p{margin:0;color:var(--mute);font-size:.9rem}
+/* about */
+.ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:center}
+.ph{aspect-ratio:4/5;border:1px dashed var(--blue);border-radius:8px;display:grid;place-content:center;text-align:center;color:var(--mute);background:linear-gradient(160deg,#141a29,#0b0e15);padding:1rem;font-size:.9rem}
+.ph b{font:700 2.4rem var(--h);color:var(--text);letter-spacing:.25em;display:block;margin-bottom:.4rem}
+.ab p{color:var(--mute);margin:0 0 1rem}
+/* process */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;position:relative}
+.tl div{border-top:2px solid var(--blue);padding-top:1.1rem}
+.tl b{font:700 2.4rem var(--h);color:var(--blue);display:block}
+.tl h3{font-size:1.2rem;margin:.3rem 0 .4rem}.tl p{margin:0;color:var(--mute);font-size:.92rem}
+/* skills */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem}
+.chips span{border:1px solid var(--line);border-radius:4px;padding:.45rem .9rem;font-size:.92rem;background:var(--bg2)}
+h3.k{font-size:1.25rem;margin-bottom:1rem}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.why div{border-left:2px solid var(--blue);padding:.3rem 0 .3rem 1rem;font:500 1.05rem var(--h)}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:1.1rem 0}
+summary{cursor:pointer;font:500 1.1rem var(--h);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::after{content:"+";color:var(--blue);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mute);margin:.7rem 0 0;max-width:46rem}
+/* contact */
+.ct{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem}
+.ct a.big{display:block;font:500 1.15rem var(--h);margin-bottom:.8rem;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:.8rem;word-break:break-all}
+.ct a.big:hover{color:var(--blue)}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.4rem;font-size:.88rem;color:var(--mute)}
+input,select,textarea{background:var(--bg2);border:1px solid var(--line);border-radius:4px;color:var(--text);padding:.95rem 1rem;min-height:48px;font:400 1rem var(--b);width:100%}textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+[aria-invalid=true]{border-color:#ff6b6b}
+.er{color:#ff8e8e;font-size:.82rem;min-height:1em}
+#fm{color:var(--mute);font-size:.92rem}
+footer{border-top:1px solid var(--line);padding:3rem 0 3.5rem}
+.ft{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem}
+.ft p{color:var(--mute);margin:.6rem 0 0;max-width:22rem;font-size:.92rem}
+.ft nav{all:unset}
+.fl{display:flex;flex-wrap:wrap;gap:1.2rem;align-content:start}
+.fl a{color:var(--mute);text-decoration:none;font-size:.92rem}.fl a:hover{color:var(--text)}
+.cp{color:var(--mute);font-size:.85rem;margin-top:2rem}
+#tp{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;border:1px solid var(--blue);background:var(--bg2);color:var(--blue);font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;z-index:40}
+#tp.v{opacity:1;pointer-events:auto}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+#cv{display:none}
+@media (max-width:860px){
+ .grid,.sv{grid-template-columns:1fr 1fr}.tl{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}
+ .ab,.two,.ct{grid-template-columns:1fr;gap:2rem}.ph{max-width:260px}
+}
+@media (max-width:640px){
+ section{padding:4rem 0}.grid,.sv,.tl,.why{grid-template-columns:1fr}
+ #mb{display:block}
+ .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}
+ .links.o{display:flex}.links a{padding:1rem 1.3rem;border-top:1px solid var(--line);font-size:1rem}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}*{animation:none!important;transition:none!important}
+ .rv{opacity:1;transform:none}.hero h1 .l span{transform:none}#ld b span{opacity:1;transform:none}
+}
+@media print{
+ .pcv>*:not(#cv){display:none!important}
+ .pcv #cv{display:block;background:#fff;color:#111;padding:0;font:400 11pt/1.5 Arial,sans-serif}
+ #cv h1{font-size:26pt;letter-spacing:.1em}#cv h2{font-size:12pt;border-bottom:1px solid #999;padding-bottom:2pt;margin:14pt 0 5pt;letter-spacing:.08em}
+ #cv p,#cv li{margin:0 0 3pt;color:#222}#cv ul{margin:0;padding-left:16pt}
+}
+</style>
+</head>
+<body>
+<div id="ld" aria-hidden="true"><b></b></div>
+
+<nav id="nv"><div class="w nb">
+ <a class="logo" href="#home" aria-label="SAHIN home">SAHIN<i>.</i></a>
+ <button id="mb" aria-expanded="false" aria-controls="lk">Menu</button>
+ <div class="links" id="lk"><a href="#home">Home</a><a href="#work">Projects</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<main>
+<header class="hero" id="home">
+ <div class="glow" id="gl"></div>
+ <div class="w">
+  <div class="eb">INDEPENDENT VIDEO EDITOR &amp; MOTION DESIGNER</div>
+  <h1 aria-label="Turning ideas into visual stories."><span class="l"><span style="animation-delay:1.5s">Turning ideas</span></span><span class="l"><span style="animation-delay:1.65s">into visual</span></span><span class="l"><span style="animation-delay:1.8s">stories.</span></span></h1>
+  <p>I’m Sahin, a freelance video editor creating engaging visual experiences through thoughtful editing, cinematic storytelling and creative motion design.</p>
+  <div class="cta"><a class="btn" href="#work">EXPLORE MY WORK</a><a class="btn o" href="#contact">LET’S WORK TOGETHER</a></div>
+ </div>
+ <div class="sc" aria-hidden="true"></div>
+</header>
+
+<section id="reel" class="alt"><div class="w rv">
+ <h2>THE VISUAL EXPERIENCE.</h2>
+ <p class="sub">A curated look at independent samples and concept demonstrations. Each item is clearly labeled; video previews can be added when the final project files are ready.</p>
+ <div class="reel" id="rl"><button class="pl" id="pb"><i></i><span>Play showreel</span></button></div>
+ <p class="note" id="rn" role="status"></p>
+</div></section>
+
+<section id="work"><div class="w rv">
+ <h2>SELECTED PROJECTS</h2>
+ <p class="sub">Every project is labeled honestly so you always know what you’re watching.</p>
+ <div class="leg"><span>Real Client Project</span><span>Personal Sample Project</span><span>Concept Demonstration</span></div>
+ <div class="grid" id="pg"></div>
+</div></section>
+
+<dialog id="dg"><button class="cl" id="dc" aria-label="Close">Close</button><h3 id="dt"></h3><p class="tag" id="dk" style="display:inline-block"></p><p id="dd" style="color:var(--mute)"></p><div class="reel" id="dv" style="margin:1rem 0"></div><p class="note" id="dn" role="status"></p></dialog>
+
+<section id="services" class="alt"><div class="w rv">
+ <h2>SERVICES</h2>
+ <p class="sub">Focused editing for brands and creators who care about details.</p>
+ <div class="sv" id="sg"></div>
+</div></section>
+
+<section id="about"><div class="w ab rv">
+ <div class="ph"><div><b>SAHIN</b>PROFILE PHOTO<br><span style="font-size:.78rem">Photo placeholder — replace this block with your own portrait when ready.</span></div></div>
+ <div>
+  <h2>BEHIND THE EDIT.</h2>
+  <p>I’m Sahin, an independent freelance video editor focused on creating engaging digital content, product advertisements and cinematic visual experiences.</p>
+  <p>I enjoy transforming raw footage and creative ideas into polished visual stories through thoughtful editing, pacing, sound design and motion.</p>
+  <p>My approach: start from the story, keep every cut purposeful, and make sure sound and motion support the message.</p>
+  <button class="btn o" id="cvb">DOWNLOAD CV</button>
+  <p class="note">Opens a one-page CV. Choose “Save as PDF” in the print dialog.</p>
+ </div>
+</div></section>
+
+<section id="process" class="alt"><div class="w rv">
+ <h2>CREATIVE PROCESS</h2><p class="sub">A clear path from idea to delivery.</p>
+ <div class="tl">
+  <div><b>01</b><h3>DISCOVER</h3><p>Understand the client’s vision and goals.</p></div>
+  <div><b>02</b><h3>PLAN</h3><p>Develop the creative direction and visual structure.</p></div>
+  <div><b>03</b><h3>CREATE</h3><p>Edit, refine, animate and synchronize the visuals and sound.</p></div>
+  <div><b>04</b><h3>DELIVER</h3><p>Review and deliver the final project.</p></div>
+ </div>
+</div></section>
+
+<section id="skills"><div class="w rv">
+ <h2>SKILLS &amp; SOFTWARE</h2><p class="sub">Practical editing skills and creative tools used in my independent projects.</p>
+ <div class="two">
+  <div><h3 class="k">Editing skills</h3><div class="chips" id="sk"></div></div>
+  <div><h3 class="k">Software</h3><div class="chips" id="sw"></div></div>
+ </div>
+ <h2 style="margin-top:4rem;font-size:clamp(1.6rem,5vw,2.4rem)">WHY WORK WITH ME</h2>
+ <div class="why" style="margin-top:1.4rem"><div>Attention to detail</div><div>Creative storytelling</div><div>Visual consistency</div><div>Client-focused communication</div><div>Careful editing refinement</div><div>Clear project communication</div></div>
+</div></section>
+
+<section id="faq" class="alt"><div class="w rv" style="max-width:820px">
+ <h2>FAQ</h2><p class="sub">Edit these answers any time in index.html.</p>
+ <details><summary>What type of videos do you edit?</summary><p>Short-form social videos, product and jewelry advertisements, motion graphics and cinematic edits.</p></details>
+ <details><summary>Do you edit Instagram Reels and YouTube Shorts?</summary><p>Yes. Vertical short-form video is a core part of my work.</p></details>
+ <details><summary>Can you create product advertisements?</summary><p>Yes. Send me your product footage or photos and the message you want to communicate.</p></details>
+ <details><summary>How can I share my footage?</summary><p>Email me first and we’ll agree on a method, such as a shared cloud folder link.</p></details>
+ <details><summary>How can I request a project?</summary><p>Use the inquiry form below or contact me on Instagram with the video type, length and deadline.</p></details>
+ <details><summary>How do revisions work?</summary><p>Revision details are agreed before the project starts, so both sides know what to expect.</p></details>
+</div></section>
+
+<section id="contact"><div class="w ct rv">
+ <div>
+  <h2>LET’S CREATE SOMETHING GREAT.</h2>
+  <p class="sub">Have a project in mind? Tell me about your vision and let’s discuss the possibilities.</p>
+  <a class="big" href="mailto:Growlens7@gmail.com">Growlens7@gmail.com</a>
+  <a class="big" href="https://www.instagram.com/growlensai?dlrf=MTgydDVoOHk2YWM2dA==" target="_blank" rel="noopener">@growlensai on Instagram</a>
+ </div>
+ <form id="fx" novalidate>
+  <label>Full name<input id="fn" autocomplete="name" required><span class="er" id="e1"></span></label>
+  <label>Email address<input id="fe" type="email" autocomplete="email" required><span class="er" id="e2"></span></label>
+  <label>Project type<select id="ft" required><option value="">Select a type</option><option>Instagram Reels</option><option>YouTube Shorts</option><option>Jewelry Advertisement</option><option>Product Commercial</option><option>Motion Graphics</option><option>Other</option></select><span class="er" id="e3"></span></label>
+  <label>Project details<textarea id="fd" rows="5" required></textarea><span class="er" id="e4"></span></label>
+  <button class="btn" type="submit">PREPARE EMAIL</button>
+   <p class="note">This form prepares an email in the visitor’s email app. It does not send or store submissions on this website.</p>
+  <p id="fm" role="status"></p>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="w">
+ <div class="ft">
+  <div><a class="logo" href="#home">SAHIN<i>.</i></a><p>Independent Video Editor &amp; Creative Visual Storyteller.</p></div>
+  <div class="fl"><a href="#home">Home</a><a href="#about">About</a><a href="#work">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="mailto:Growlens7@gmail.com">Email</a><a href="https://www.instagram.com/growlensai?dlrf=MTgydDVoOHk2YWM2dA==" target="_blank" rel="noopener">Instagram</a></div>
+ </div>
+ <p class="cp">© 2026 SAHIN. All rights reserved.</p>
+</div></footer>
+<button id="tp" aria-label="Back to top">↑</button>
+
+<section id="cv">
+ <h1>SAHIN</h1><p><b>Freelance Video Editor &amp; Motion Designer</b></p>
+ <p>Growlens7@gmail.com · Instagram @growlensai · India</p>
+ <h2>PROFESSIONAL SUMMARY</h2><p>Independent video editor focused on short-form content, product advertisements, jewelry commercials and cinematic visual storytelling.</p>
+ <h2>EDITING SKILLS</h2><p>Short-form editing, product storytelling, motion graphics, typography animation, video transitions, basic color correction, sound design, audio synchronization.</p>
+ <h2>TOOLS</h2><p>Alight Motion, CapCut, KineMaster, VN Video Editor, AI-assisted creative tools.</p>
+ <h2>SERVICES</h2><ul><li>Instagram Reels and YouTube Shorts editing</li><li>Jewelry advertisement and product commercial editing</li><li>Motion graphics and cinematic editing</li><li>Social media advertisements</li></ul>
+ <h2>INDEPENDENT PROJECTS</h2><p>[Add your sample projects here]</p>
+ <h2>EDUCATION</h2><p>[Add your education details here]</p>
+</section>
+
+<script>
+/* ===== EDIT YOUR CONTENT HERE ===== */
+var CONFIG={showreel:"",poster:""}; // showreel: direct video file URL (.mp4)
+var PROJECTS=[ // type: "Real Client Project" | "Personal Sample Project" | "Concept Demonstration"
+ {t:"Jewelry Advertisement",c:"Jewelry Advertisement",type:"Personal Sample Project",d:"A luxury-style jewelry ad built around close detail shots, soft light and a refined sound bed.",u:""},
+ {t:"Product Commercial",c:"Product Commercial",type:"Personal Sample Project",d:"A short product spot focused on clear storytelling and a strong call to action.",u:""},
+ {t:"Instagram Reels",c:"Instagram Reels",type:"Personal Sample Project",d:"Vertical edits with tight pacing, captions and beat-synced cuts.",u:""},
+ {t:"YouTube Shorts",c:"YouTube Shorts",type:"Personal Sample Project",d:"Fast, retention-focused Shorts with clean typography.",u:""},
+ {t:"Motion Graphics",c:"Motion Graphics",type:"Concept Demonstration",d:"Animated typography and interface motion that explains an idea at a glance.",u:""},
+ {t:"Cinematic Video Editing",c:"Cinematic Video Editing",type:"Concept Demonstration",d:"A mood-driven edit that leans on pacing, grade and sound.",u:""}
+];
+var SERVICES=[
+ ["Instagram Reels Editing","Scroll-stopping vertical edits with captions, rhythm and clean audio."],
+ ["YouTube Shorts Editing","Short-form cuts built to hold attention from the first second."],
+ ["Jewelry Advertisement Editing","Elegant, detail-led edits that let each piece shine."],
+ ["Product Commercial Videos","Clear product storytelling from raw footage to final spot."],
+ ["Motion Graphics","Animated text, shapes and interface motion for any video."],
+ ["Cinematic Video Editing","Story-first edits with considered pacing and mood."],
+ ["Social Media Advertisements","Ad-ready cuts sized and paced for each platform."],
+ ["Color Correction & Sound Design","Basic grading, audio cleanup and sync to polish the final result."]
+];
+var SKILLS=["Short-Form Editing","Product Storytelling","Motion Graphics","Typography Animation","Video Transitions","Basic Color Correction","Sound Design","Audio Synchronization"];
+var SOFT=["Alight Motion","CapCut","KineMaster","VN Video Editor","AI-Assisted Creative Tools"];
+var EMAIL="Growlens7@gmail.com";
+/* ================================== */
+var $=function(i){return document.getElementById(i)};
+var ICONS=['<path d="M6 4l14 8-14 8z"/>','<path d="M4 20L16 8M14 4l1 3 3 1-3 1-1 3-1-3-3-1 3-1z"/>','<path d="M3 12h3l2-6 4 12 3-9 2 3h4"/>','<rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M9 5v5"/>'];
+$("ld").querySelector("b").innerHTML="SAHIN".split("").map(function(c,i){return '<span style="animation-delay:'+(i*.12)+'s">'+c+'</span>'}).join("");
+window.addEventListener("load",function(){setTimeout(function(){$("ld").classList.add("x")},1100)});
+setTimeout(function(){$("ld").classList.add("x")},3000);
+function pill(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+$("pg").innerHTML=PROJECTS.map(function(p,i){return '<article class="card"><div class="th"><div><span>'+pill(p.t)+'</span></div></div><div class="cb"><div class="r"><span>'+pill(p.c)+'</span><span class="tag">'+pill(p.type)+'</span></div><h3>'+pill(p.t)+'</h3><p>'+pill(p.d)+'</p><div><button class="mini" data-i="'+i+'">View project details</button></div></div></article>'}).join("");
+$("sg").innerHTML=SERVICES.map(function(s,i){return '<div><svg viewBox="0 0 24 24" aria-hidden="true">'+ICONS[i%4]+'</svg><h3>'+pill(s[0])+'</h3><p>'+pill(s[1])+'</p></div>'}).join("");
+$("sk").innerHTML=SKILLS.map(function(s){return "<span>"+s+"</span>"}).join("");
+$("sw").innerHTML=SOFT.map(function(s){return "<span>"+s+"</span>"}).join("");
+function player(box,note,url,label){
+ var b=box.querySelector(".pl");if(b)b.remove();
+ if(!url){box.innerHTML='<button class="pl" disabled><i></i><span>'+label+' not added yet</span></button>';note.textContent="No video link has been set for this yet.";return}
+ var v=document.createElement("video");v.controls=true;v.autoplay=true;v.playsInline=true;v.src=url;
+ v.onerror=function(){note.textContent="This video link could not be loaded. Check the URL in CONFIG."};
+ box.innerHTML="";box.appendChild(v);note.textContent="";
+}
+$("pb").onclick=function(){player($("rl"),$("rn"),CONFIG.showreel,"Showreel")};
+var dg=$("dg");
+$("pg").addEventListener("click",function(e){var b=e.target.closest("button[data-i]");if(!b)return;var p=PROJECTS[b.dataset.i];
+ $("dt").textContent=p.t;$("dk").textContent=p.type+" · "+p.c;$("dd").textContent=p.d;$("dn").textContent="";
+ $("dv").innerHTML='<button class="pl" id="dp"><i></i><span>Play project</span></button>';
+ $("dp").onclick=function(){player($("dv"),$("dn"),p.u,"Project video")};
+ if(dg.showModal)dg.showModal();else dg.setAttribute("open","")});
+$("dc").onclick=function(){dg.close()};
+dg.addEventListener("click",function(e){if(e.target===dg)dg.close()});
+dg.addEventListener("close",function(){$("dv").innerHTML=""});
+/* nav */
+var mb=$("mb"),lk=$("lk");
+mb.onclick=function(){var o=lk.classList.toggle("o");mb.setAttribute("aria-expanded",o)};
+lk.addEventListener("click",function(e){if(e.target.tagName==="A"){lk.classList.remove("o");mb.setAttribute("aria-expanded","false")}});
+var rm=matchMedia("(prefers-reduced-motion:reduce)").matches,tk=false;
+window.addEventListener("scroll",function(){if(tk)return;tk=true;requestAnimationFrame(function(){var y=scrollY;
+ $("nv").classList.toggle("s",y>20);$("tp").classList.toggle("v",y>700);
+ if(!rm&&y<1200)$("gl").style.transform="translateY("+(y*.15)+"px)";tk=false})},{passive:true});
+$("tp").onclick=function(){scrollTo({top:0,behavior:rm?"auto":"smooth"})};
+/* reveal */
+if("IntersectionObserver"in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll(".rv").forEach(function(n){io.observe(n)})}else document.querySelectorAll(".rv").forEach(function(n){n.classList.add("in")});
+/* CV */
+$("cvb").onclick=function(){document.body.classList.add("pcv");window.print();setTimeout(function(){document.body.classList.remove("pcv")},800)};
+window.addEventListener("afterprint",function(){document.body.classList.remove("pcv")});
+/* form: opens the visitor's own email app; nothing is sent until they press Send there */
+$("fx").addEventListener("submit",function(e){e.preventDefault();
+ var f={n:$("fn"),e:$("fe"),t:$("ft"),d:$("fd")},ok=true;
+ function chk(el,er,bad,msg){var m=bad?msg:"";$(er).textContent=m;el.setAttribute("aria-invalid",bad);if(bad&&ok){el.focus();ok=false}}
+ chk(f.n,"e1",f.n.value.trim().length<2,"Please enter your full name.");
+ chk(f.e,"e2",!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.e.value.trim()),"Please enter a valid email address.");
+ chk(f.t,"e3",!f.t.value,"Please choose a project type.");
+ chk(f.d,"e4",f.d.value.trim().length<15,"Please add at least a few sentences about your project.");
+ if(!ok){$("fm").textContent="";return}
+ var s="Project inquiry: "+f.t.value,b="Name: "+f.n.value.trim()+"\nEmail: "+f.e.value.trim()+"\nProject type: "+f.t.value+"\n\n"+f.d.value.trim();
+ var h="mailto:"+EMAIL+"?subject="+encodeURIComponent(s)+"&body="+encodeURIComponent(b);
+ $("fm").innerHTML='Your email app should open with this message ready. Nothing is sent until you press Send there. If it doesn’t open, <a href="'+h+'" style="color:var(--blue)">open the email draft</a> or write to '+EMAIL+'.';
+ location.href=h});
+</script>
+</body>
+</html>
